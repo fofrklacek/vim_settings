@@ -27,6 +27,8 @@ if has("gui_running") || &t_Co == 256
 	hi cConstant cterm=bold ctermfg=57 ctermbg=16	
 	"for, while
 	hi cRepeat cterm=NONE ctermfg=93 ctermbg=16
+	"if
+	hi! link cconditional cRepeat
 	"class, template, typename
 	hi cppStructure cterm=BOLD ctermfg=172 ctermbg=16
 	"typedef, struct
@@ -43,5 +45,6 @@ if has("gui_running") || &t_Co == 256
 	hi Visual cterm=BOLD ctermbg=233
 	"std, filesystem, ios, sf
 	hi cppNamespace cterm=NONE ctermfg=21 ctermbg=16
+	
 else
 endif
