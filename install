@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Are you sure that you want to remove .vim/,"
+echo ".vimrc?"
+
+read choice
+
+case "$choice" in
+	yes|y)
+		cp -r .vim .vimrc ~/.
+		;;
+	no|n)
+		exit 1
+		;;
+esac
