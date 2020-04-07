@@ -66,7 +66,7 @@ endfunction
 :set number
 :language en_US.UTF-8
 :syntax on
-:set foldmethod=syntax
+"":set foldmethod=syntax
 :set hlsearch
 
 :call s:MyLearning()
@@ -236,6 +236,10 @@ function! s:MyCSettings()
 	
 	" napise druhy par zavorek
 	:inoremap { <esc>2k$wy0o<esc>Pa{<esc>2o<esc>pA}<esc>k0PA<tab>
+	
+	"Testing auto foldmethod thad doesn't need {{{}}}
+	"TODO: needs to add regular expresion: '^{$'
+	:set foldmarker={,}
 	
 	"Fold marker when starting vim file
 	:set foldmethod=marker
